@@ -11,9 +11,11 @@ describe("fill automation tester survey", () => {
   it("I fill the survey with all informations", () => {
     cy.visit("index.html");
     cy.get("#lastName").type(lastName);
-    //cy.get("#lastName").should("contain.text", lastName);
+    cy.get("#lastName").should("have.value", lastName);
     cy.get("#firstName").type(firstName);
+    cy.get("#firstName").should("have.value", firstName);
     cy.get("#email").type(email);
+    cy.get("#email").should("have.value", email);
     cy.get('[type="text"]').type("45");
     cy.get("[value=cypress]").check({ force: true });
     cy.get("[name=level]").select("Moyen").should("have.value", "medium");
