@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/thomasfacquet/demo-form-html-css#readme",
   "dependencies": {
+    "@fakerjs/age": "^2.1.1",
     "cypress": "^11.0.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }
